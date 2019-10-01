@@ -1,0 +1,45 @@
+// Nombre y datos relevantes
+// Extracto personal
+// Tecnologías aprendidas
+// Proyectos con link (portfolio)
+// Formulario de contacto
+
+@import "./styles/_resets";
+
+$color-primary: #000;
+$color-secondary: #000;
+$color-terciary: #000;
+$color-background: #000;
+
+%fontfamily-sans {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+%fontfamily-mono {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  img {
+    max-width: 3rem;
+  }
+  .nav-links {
+    flex-flow: row nowrap;
+    li {
+      padding-left: 1rem;
+    }
+  }
+}
