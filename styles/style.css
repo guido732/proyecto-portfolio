@@ -14,7 +14,7 @@ a {
 }
 
 h1, h2, p, body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -60,7 +60,7 @@ a {
 a:hover {
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  color: #8c43ff;
+  color: #4384fe;
 }
 
 h1 {
@@ -108,7 +108,7 @@ img {
 }
 
 .highlight {
-  color: #8c43ff;
+  color: #4384fe;
 }
 
 .container {
@@ -119,9 +119,9 @@ img {
 }
 
 .btn {
-  border: 2px solid #8c43ff;
+  border: 2px solid #4384fe;
   background: transparent;
-  color: #8c43ff;
+  color: #4384fe;
   font-size: 1.2rem;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -133,7 +133,7 @@ img {
 .btn:hover {
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  background-color: #8c43ff;
+  background-color: #4384fe;
   color: #ffffff;
 }
 
@@ -155,46 +155,34 @@ img {
 }
 
 .color-bg {
-  background-color: #8c43ff;
+  background-color: #4384fe;
 }
 
 .shadow-md, .contact-container .contact:hover {
-  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.mb-sm {
-  margin-bottom: 1rem;
+.waves-bottom {
+  position: absolute;
+  width: 100%;
+  fill: #4384fe;
+  bottom: 1%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
-.mb-md {
-  margin-bottom: 2rem;
-}
-
-.mb-lg {
-  margin-bottom: 4rem;
-}
-
-.pb-sm {
-  margin-bottom: 1rem;
-}
-
-.pb-md {
-  margin-bottom: 2rem;
-}
-
-.pb-lg {
-  margin-bottom: 4rem;
+.waves-bottom svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .acerca,
 .header,
 footer {
   padding: 10rem 0 10rem 0;
-}
-
-.acerca {
-  margin-top: -18rem;
 }
 
 nav {
@@ -207,6 +195,7 @@ nav {
 }
 
 .nav {
+  margin-top: 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -228,7 +217,7 @@ nav {
 }
 
 .nav .nav-links li {
-  padding-left: 2rem;
+  padding-left: 4rem;
 }
 
 .nav .nav-item {
@@ -249,23 +238,42 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .header img {
   max-width: 250px;
-  margin: 1rem;
   border-radius: 50%;
+}
+
+.header p {
+  margin-bottom: 2rem;
+}
+
+.acerca {
+  margin-top: -18rem;
+  padding-bottom: 17.5rem;
+  position: relative;
+  z-index: -1;
+}
+
+.acerca p {
+  max-width: 715px;
+  margin: auto;
 }
 
 .col-container {
   width: 100%;
   position: relative;
-  margin-top: -5rem;
+  margin-top: -12rem;
+  margin-bottom: 4rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid red;
+  border: 1px solid #e5edff;
   border-radius: 0.5rem;
   background-color: #fff;
 }
@@ -278,11 +286,36 @@ nav {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #e5edff;
 }
 
 .col-container .column:last-child {
   border-bottom: none;
+}
+
+.col-container .column svg {
+  color: #4384fe;
+  margin-bottom: 2rem;
+}
+
+.col-container .column p {
+  margin-bottom: 1rem;
+}
+
+.col-container .column h3 {
+  margin-bottom: 0.5rem;
+}
+
+.col-container .column li {
+  margin-bottom: 0.5rem;
+}
+
+.portfolio {
+  margin-bottom: 4rem;
+}
+
+.portfolio p {
+  margin-bottom: 2rem;
 }
 
 .pofo-container {
@@ -348,16 +381,24 @@ nav {
           transition-delay: 0.25s;
 }
 
+.contacto {
+  margin-bottom: 4rem;
+}
+
+.contacto h2 {
+  margin-bottom: 2rem;
+}
+
 .contact-container {
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .contact-container .contact {
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 50%;
   font-size: 1.2rem;
   background-color: #fff;
@@ -430,6 +471,13 @@ nav {
 }
 
 @media screen and (min-width: 576px) {
+  .header img {
+    max-width: 300px;
+  }
+  .acerca {
+    padding-top: 13rem;
+    margin-top: -19rem;
+  }
   .pofo-item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 300px;
@@ -442,9 +490,9 @@ nav {
             flex: 1 1 40%;
   }
   .contact-container {
-    width: 80%;
+    max-width: 578px;
     margin: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
   .contact-container .contact {
     font-size: 1.5rem;
@@ -457,8 +505,26 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-  .contact-container {
-    width: 70%;
+  .header img {
+    max-width: 350px;
+  }
+  .col-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .col-container .column {
+    padding: 3rem 1.5rem;
+    border-bottom: none;
+    border-right: 1px solid #e5edff;
+  }
+  .col-container .column:last-child {
+    border-right: none;
+  }
+  .acerca {
+    padding-top: 15rem;
+    margin-top: -20.5rem;
   }
   .contact-container .contact {
     font-size: 2rem;
@@ -473,6 +539,16 @@ nav {
 }
 
 @media screen and (min-width: 992px) {
+  .header img {
+    max-width: 350px;
+  }
+  .col-container .column {
+    padding: 3rem;
+  }
+  .acerca {
+    padding-top: 16rem;
+    margin-top: -21rem;
+  }
   .contact-container {
     max-width: 578px;
   }
@@ -482,6 +558,7 @@ nav {
   .nav {
     max-width: 1100px;
     margin: auto;
+    margin-top: 1rem;
   }
   .nav .nav-item {
     margin: 1rem 0rem;
@@ -495,18 +572,15 @@ nav {
   h1 {
     font-size: 2.5rem;
   }
-  .col-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .header p {
+    margin-bottom: 4rem;
   }
-  .col-container .column {
-    border-bottom: none;
-    border-right: 1px solid red;
+  .header img {
+    max-width: 400px;
   }
-  .col-container .column:last-child {
-    border-right: none;
+  .acerca {
+    padding-top: 17rem;
+    margin-top: -22rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,10 +8,11 @@
 @import "./_resets";
 
 // Vars
-// $color-highlight: #f0a13a;
 $color-primary: #8c43ff;
+$color-primary: #4384fe;
 $color-secondary: #55abe4;
 $color-background: #fff;
+$color-border: #e5edff;
 
 $text-dark: #2f2f35;
 $text-light: #ffffff;
@@ -27,16 +28,13 @@ $breakpoint-desktop-lg: 1200px;
 $border-radius-sm: 0.5rem;
 $border-radius-md: 1rem;
 
-$mb-sm: 1rem;
-$mb-md: 2rem;
-$mb-lg: 4rem;
+$m-sm: 1rem;
+$m-md: 2rem;
+$m-lg: 4rem;
 
-$pb-sm: 1rem;
-$pb-md: 2rem;
-$pb-lg: 4rem;
 // Extends
 %fontfamily-sans {
-	font-family: "Raleway", sans-serif;
+	font-family: "Be Vietnam", sans-serif;
 	font-weight: 400;
 	font-size: 1rem;
 }
@@ -126,26 +124,20 @@ img {
 	background-color: $color-primary;
 }
 .shadow-md {
-	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
-
-.mb-sm {
-	margin-bottom: $mb-sm;
-}
-.mb-md {
-	margin-bottom: $mb-md;
-}
-.mb-lg {
-	margin-bottom: $mb-lg;
-}
-.pb-sm {
-	margin-bottom: $pb-sm;
-}
-.pb-md {
-	margin-bottom: $pb-md;
-}
-.pb-lg {
-	margin-bottom: $pb-lg;
+.waves-bottom {
+	position: absolute;
+	width: 100%;
+	fill: $color-primary;
+	bottom: 1%;
+	transform: translateY(100%);
+	svg {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 }
 
 // Section specific styling
@@ -158,9 +150,7 @@ body {
 footer {
 	padding: 10rem 0 10rem 0;
 }
-.acerca {
-	margin-top: -18rem;
-}
+
 nav {
 	position: absolute;
 	top: 0;
@@ -170,6 +160,7 @@ nav {
 	top: 0;
 }
 .nav {
+	margin-top: $m-sm;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	@extend %fontfamily-mono;
@@ -179,7 +170,7 @@ nav {
 	.nav-links {
 		flex-flow: row nowrap;
 		li {
-			padding-left: 2rem;
+			padding-left: $m-lg;
 		}
 	}
 	.nav-item {
@@ -196,32 +187,66 @@ nav {
 .header {
 	width: 100%;
 	flex-direction: column;
+	margin-top: $m-md;
+	padding-left: $m-sm;
+	padding-right: $m-sm;
 	img {
 		max-width: 250px;
-		margin: 1rem;
 		border-radius: 50%;
+	}
+	p {
+		margin-bottom: $m-md;
+	}
+}
+.acerca {
+	margin-top: -18rem;
+	padding-bottom: 17.5rem;
+	position: relative;
+	z-index: -1;
+	p {
+		max-width: 715px;
+		margin: auto;
 	}
 }
 
 .col-container {
 	width: 100%;
 	position: relative;
-	margin-top: -5rem;
+	margin-top: -$m-lg * 3;
+	margin-bottom: $m-lg;
 	flex-direction: column;
-	border: 1px solid red;
+	border: 1px solid $color-border;
 	border-radius: $border-radius-sm;
 	background-color: $color-background;
 	.column {
 		flex: 1 1 0;
 		padding: 3rem;
 		align-self: stretch;
-		border-bottom: 1px solid red;
+		border-bottom: 1px solid $color-border;
 		&:last-child {
 			border-bottom: none;
 		}
+		svg {
+			color: $color-primary;
+			margin-bottom: $m-md;
+		}
+		p {
+			margin-bottom: $m-sm;
+		}
+		h3 {
+			margin-bottom: $m-sm / 2;
+		}
+		li {
+			margin-bottom: $m-sm / 2;
+		}
 	}
 }
-
+.portfolio {
+	margin-bottom: $m-lg;
+	p {
+		margin-bottom: $m-md;
+	}
+}
 .pofo-container {
 	flex-flow: row wrap;
 }
@@ -267,13 +292,18 @@ nav {
 		}
 	}
 }
-
+.contacto {
+	margin-bottom: $m-lg;
+	h2 {
+		margin-bottom: $m-md;
+	}
+}
 .contact-container {
 	width: 100%;
 	justify-content: space-between;
-	margin-bottom: $mb-md;
+	margin-bottom: $m-lg;
 	.contact {
-		padding: 0.5rem;
+		padding: 1rem;
 		border-radius: 50%;
 		font-size: 1.2rem;
 		background-color: $color-background;
@@ -315,7 +345,7 @@ nav {
 		}
 	}
 	textarea {
-		margin-bottom: $mb-md;
+		margin-bottom: $m-md;
 	}
 	button {
 		@extend %fontfamily-mono;
@@ -323,6 +353,16 @@ nav {
 }
 // Media Queries
 @media screen and (min-width: $breakpoint-mobile) {
+	.header {
+		img {
+			max-width: 300px;
+		}
+	}
+	.acerca {
+		padding-top: 13rem;
+		margin-top: -19rem;
+	}
+
 	.pofo-item {
 		flex: 1 1 300px;
 		margin: 0 0.5rem 1rem 0.5rem;
@@ -333,9 +373,9 @@ nav {
 		}
 	}
 	.contact-container {
-		width: 80%;
+		max-width: 578px;
 		margin: auto;
-		margin-bottom: $mb-md;
+		margin-bottom: $m-lg;
 		.contact {
 			font-size: 1.5rem;
 			padding: 0.75rem;
@@ -349,8 +389,27 @@ nav {
 	}
 }
 @media screen and (min-width: $breakpoint-tablet) {
+	.header {
+		img {
+			max-width: 350px;
+		}
+	}
+	.col-container {
+		flex-direction: row;
+		.column {
+			padding: 3rem 1.5rem;
+			border-bottom: none;
+			border-right: 1px solid $color-border;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+	.acerca {
+		padding-top: 15rem;
+		margin-top: -20.5rem;
+	}
 	.contact-container {
-		width: 70%;
 		.contact {
 			font-size: 2rem;
 			padding: 1rem;
@@ -364,6 +423,20 @@ nav {
 	}
 }
 @media screen and (min-width: $breakpoint-desktop-sm) {
+	.header {
+		img {
+			max-width: 350px;
+		}
+	}
+	.col-container {
+		.column {
+			padding: 3rem;
+		}
+	}
+	.acerca {
+		padding-top: 16rem;
+		margin-top: -21rem;
+	}
 	.contact-container {
 		max-width: 578px;
 	}
@@ -372,6 +445,7 @@ nav {
 	.nav {
 		max-width: 1100px;
 		margin: auto;
+		margin-top: 1rem;
 		.nav-item {
 			margin: 1rem 0rem;
 			&:first-child {
@@ -385,14 +459,16 @@ nav {
 	h1 {
 		font-size: 2.5rem;
 	}
-	.col-container {
-		flex-direction: row;
-		.column {
-			border-bottom: none;
-			border-right: 1px solid red;
-			&:last-child {
-				border-right: none;
-			}
+	.header {
+		p {
+			margin-bottom: $m-lg;
 		}
+		img {
+			max-width: 400px;
+		}
+	}
+	.acerca {
+		padding-top: 17rem;
+		margin-top: -22rem;
 	}
 }
