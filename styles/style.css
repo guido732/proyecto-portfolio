@@ -19,7 +19,33 @@ h1, h2, p, body {
   font-size: 1rem;
 }
 
-a, .nav {
+a, .nav, .contact-form input,
+.contact-form textarea, .contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder, .contact-form button {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+a, .nav, .contact-form input,
+.contact-form textarea, .contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder, .contact-form button {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+a, .nav, .contact-form input,
+.contact-form textarea, .contact-form input::-ms-input-placeholder,
+.contact-form textarea::-ms-input-placeholder, .contact-form button {
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+a, .nav, .contact-form input,
+.contact-form textarea, .contact-form input::placeholder,
+.contact-form textarea::placeholder, .contact-form button {
   font-family: "Fira Code", monospace;
   font-weight: 500;
   font-size: 1rem;
@@ -40,11 +66,17 @@ a:hover {
 h1 {
   font-size: 2rem;
   font-weight: 700;
+  padding-bottom: 1rem;
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+p {
+  padding-bottom: 1rem;
 }
 
 img {
@@ -126,18 +158,43 @@ img {
   background-color: #8c43ff;
 }
 
-.shadow-md {
+.shadow-md, .contact-container .contact:hover {
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.pb-sm {
+  margin-bottom: 1rem;
+}
+
+.pb-md {
+  margin-bottom: 2rem;
+}
+
+.pb-lg {
+  margin-bottom: 4rem;
+}
+
 .acerca,
-.header {
-  padding: 10rem 0 6rem 0;
+.header,
+footer {
+  padding: 10rem 0 10rem 0;
 }
 
 .acerca {
-  margin-top: -15rem;
+  margin-top: -18rem;
 }
 
 nav {
@@ -203,7 +260,7 @@ nav {
 .col-container {
   width: 100%;
   position: relative;
-  margin-top: -2rem;
+  margin-top: -5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -290,12 +347,122 @@ nav {
           transition-delay: 0.25s;
 }
 
+.contact-container {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.contact-container .contact {
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.contact-container .contact:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #2f2f35;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #2f2f35;
+}
+
+.contact-form input:empty, .contact-form input:valid,
+.contact-form textarea:empty,
+.contact-form textarea:valid {
+  border: 1px solid #55abe4;
+}
+
+.contact-form input:active, .contact-form input:focus,
+.contact-form textarea:active,
+.contact-form textarea:focus {
+  -webkit-box-shadow: 0 0 3px 0 #55abe4;
+          box-shadow: 0 0 3px 0 #55abe4;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.contact-form input::-ms-input-placeholder,
+.contact-form textarea::-ms-input-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.contact-form textarea {
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 576px) {
   .pofo-item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 300px;
             flex: 1 1 300px;
     margin: 0 0.5rem 1rem 0.5rem;
+  }
+  .contact-container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .contact-container .contact {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 578px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    width: 70%;
+  }
+  .contact-container .contact {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-container {
+    max-width: 578px;
   }
 }
 

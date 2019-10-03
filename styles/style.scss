@@ -26,6 +26,14 @@ $breakpoint-desktop-lg: 1200px;
 
 $border-radius-sm: 0.5rem;
 $border-radius-md: 1rem;
+
+$mb-sm: 1rem;
+$mb-md: 2rem;
+$mb-lg: 4rem;
+
+$pb-sm: 1rem;
+$pb-md: 2rem;
+$pb-lg: 4rem;
 // Extends
 %fontfamily-sans {
 	font-family: "Raleway", sans-serif;
@@ -51,14 +59,17 @@ h1 {
 	@extend %fontfamily-sans;
 	font-size: 2rem;
 	font-weight: 700;
+	padding-bottom: 1rem;
 }
 h2 {
 	@extend %fontfamily-sans;
 	font-size: 2rem;
 	font-weight: 700;
+	padding-bottom: 1rem;
 }
 p {
 	@extend %fontfamily-sans;
+	padding-bottom: 1rem;
 }
 img {
 	width: 100%;
@@ -117,20 +128,39 @@ img {
 .shadow-md {
 	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
+
+.mb-sm {
+	margin-bottom: $mb-sm;
+}
+.mb-md {
+	margin-bottom: $mb-md;
+}
+.mb-lg {
+	margin-bottom: $mb-lg;
+}
+.pb-sm {
+	margin-bottom: $pb-sm;
+}
+.pb-md {
+	margin-bottom: $pb-md;
+}
+.pb-lg {
+	margin-bottom: $pb-lg;
+}
+
 // Section specific styling
 body {
 	@extend %fontfamily-sans;
 }
 
 .acerca,
-.header {
-	padding: 10rem 0 6rem 0;
+.header,
+footer {
+	padding: 10rem 0 10rem 0;
 }
-
 .acerca {
-	margin-top: -15rem;
+	margin-top: -18rem;
 }
-
 nav {
 	position: absolute;
 	top: 0;
@@ -176,7 +206,7 @@ nav {
 .col-container {
 	width: 100%;
 	position: relative;
-	margin-top: -2rem;
+	margin-top: -5rem;
 	flex-direction: column;
 	border: 1px solid red;
 	border-radius: $border-radius-sm;
@@ -190,6 +220,7 @@ nav {
 		}
 	}
 }
+
 .pofo-container {
 	flex-flow: row wrap;
 }
@@ -236,16 +267,94 @@ nav {
 	}
 }
 
+.contact-container {
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: $mb-md;
+	.contact {
+		padding: 0.5rem;
+		border-radius: 50%;
+		font-size: 1.2rem;
+		background-color: $color-background;
+		transition: $transition-hover;
+		&:hover {
+			@extend .shadow-md;
+			transition: $transition-hover / 2;
+		}
+	}
+}
+
+.contact-form {
+	input,
+	textarea {
+		display: block;
+		width: 100%;
+		margin: auto;
+		margin-bottom: 1.5rem;
+		padding: 0.75rem 1rem;
+		border: 1px solid $text-dark;
+		border-radius: $border-radius-sm;
+		@extend %fontfamily-mono;
+		font-size: 0.8rem;
+		font-weight: 400;
+		color: $text-dark;
+		&:empty,
+		&:valid {
+			border: 1px solid $color-secondary;
+		}
+		&:active,
+		&:focus {
+			box-shadow: 0 0 3px 0 $color-secondary;
+		}
+		&::placeholder {
+			@extend %fontfamily-mono;
+			font-size: 0.8rem;
+			font-weight: 400;
+			opacity: 0.5;
+		}
+	}
+	textarea {
+		margin-bottom: $mb-md;
+	}
+	button {
+		@extend %fontfamily-mono;
+	}
+}
 // Media Queries
 @media screen and (min-width: $breakpoint-mobile) {
 	.pofo-item {
 		flex: 1 1 300px;
 		margin: 0 0.5rem 1rem 0.5rem;
 	}
+	.contact-container {
+		width: 80%;
+		margin: auto;
+		margin-bottom: $mb-md;
+		.contact {
+			font-size: 1.5rem;
+			padding: 0.75rem;
+		}
+	}
+	.contact-form {
+		input,
+		textarea {
+			max-width: 578px;
+		}
+	}
 }
 @media screen and (min-width: $breakpoint-tablet) {
+	.contact-container {
+		width: 70%;
+		.contact {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+	}
 }
 @media screen and (min-width: $breakpoint-desktop-sm) {
+	.contact-container {
+		max-width: 578px;
+	}
 }
 @media screen and (min-width: $breakpoint-desktop-lg) {
 	.nav {

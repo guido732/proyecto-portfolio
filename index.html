@@ -11,7 +11,7 @@
 
 		<!-- Fonts -->
 		<link
-			href="https://fonts.googleapis.com/css?family=Fira+Code:500|Raleway:400,500,700&display=swap"
+			href="https://fonts.googleapis.com/css?family=Fira+Code:400,500|Raleway:400,500,700&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -36,9 +36,9 @@
 			<div class="container nav flex">
 				<a href="#"><img src="./img/logo.png" alt="Logo" class="brand nav-item"/></a>
 				<ul class="nav-links flex nav-item">
-					<li><a href="#" class="nav-btn">Acerca</a></li>
-					<li><a href="#" class="nav-btn">Portfolio</a></li>
-					<li><a href="#" class="nav-btn btn btn-sm">Contacto</a></li>
+					<li><a href="#acerca" class="nav-btn">Acerca</a></li>
+					<li><a href="#portfolio" class="nav-btn">Portfolio</a></li>
+					<li><a href="#contacto" class="nav-btn btn btn-sm">Contacto</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -54,7 +54,7 @@
 		<main>
 			<section class="acerca color-bg text-light text-centered">
 				<div class="container flex-col">
-					<h2>Acerca de mi:</h2>
+					<h2 id="acerca">Acerca de mi:</h2>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ducimus laboriosam quasi
 						dignissimos aut nam expedita magni, amet optio, sapiente ipsa animi accusamus delectus at
@@ -64,7 +64,7 @@
 					</p>
 				</div>
 			</section>
-			<section class="conocimientos container">
+			<section class="conocimientos container mb-lg">
 				<div class="col-container flex shadow-md text-centered">
 					<div class="column flex-col">
 						<i class="fad fa-code fa-3x"></i>
@@ -104,9 +104,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="portfolio container flex-col text-centered">
+			<section class="portfolio container flex-col text-centered mb-lg" id="portfolio">
 				<h2>Proyectos realizados</h2>
-				<p>
+				<p class="mb-md">
 					Querés ver más proyectos?
 					<a href="mailto:contacto@guidotorres.com.ar" class="highlight">Escribime!</a>
 				</p>
@@ -167,25 +167,52 @@
 					</div>
 				</div>
 			</section>
-			<section class="contacto container text-centered">
+			<section class="contacto container text-centered mb-lg" id="contacto">
 				<h2>Trabajemos juntos</h2>
-				<ul>
-					<li><a href="#">Github</a></li>
-					<li><a href="#">CodePen</a></li>
-					<li><a href="#">LinkedIn</a></li>
-					<li><a href="mailto:contacto@guidotorres.com.ar">Email</a></li>
-					<li><a href="tel:+5491151198411">Teléfono</a></li>
-				</ul>
-				<form action="">
-					<h2>Escribime!</h2>
-					<input type="text" placeholder="Nombre" />
-					<input type="email" placeholder="Email" />
-					<textarea name="" id="" cols="30" rows="10" placeholder="Escribime tu mensaje"></textarea>
-					<button type="submit">Enviar</button>
+				<div class="contact-container flex">
+					<a href="#">
+						<div class="contact">
+							<i class="fab fa-github fa-lg"></i>
+						</div>
+					</a>
+					<a href="#">
+						<div class="contact">
+							<i class="fab fa-codepen fa-lg"></i>
+						</div>
+					</a>
+					<a href="#">
+						<div class="contact">
+							<i class="fab fa-linkedin fa-lg"></i>
+						</div>
+					</a>
+					<a href="mailto:contacto@guidotorres.com.ar">
+						<div class="contact">
+							<i class="fad fa-envelope-open-text fa-lg"></i>
+						</div>
+					</a>
+					<a href="tel:+5491151198411">
+						<div class="contact">
+							<i class="fad fa-phone-alt fa-lg"></i>
+						</div>
+					</a>
+				</div>
+				<form action="" class="contact-form">
+					<input type="text" placeholder="Nombre" required />
+					<input type="email" placeholder="Email" required />
+					<textarea
+						name=""
+						id=""
+						cols="30"
+						rows="10"
+						placeholder="Escribime tu mensaje"
+						required
+						style="resize: none;"
+					></textarea>
+					<button type="submit" class="btn">Enviar</button>
 				</form>
 			</section>
 		</main>
-		<footer class="color-bg text-centered">
+		<footer class="color-bg text-light text-centered">
 			<p>Creado por mi. <a href="">Link al proyecto</a>. 2019</p>
 		</footer>
 	</body>
