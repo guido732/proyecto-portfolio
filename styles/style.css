@@ -468,7 +468,7 @@ nav {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 30%;
             flex: 1 1 30%;
-    max-width: 33.33333%;
+    max-width: 32%;
   }
 }
 
