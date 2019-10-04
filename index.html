@@ -1,262 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Guido Torres</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guido Torres</title>
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="./styles/style.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.min.css" />
 
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css?family=Be+Vietnam:400,700&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Be+Vietnam:400,700&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- Favicon https://favicon.io/favicon-generator/  Abel -->
-		<link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
-		<link rel="manifest" href="./img/icons/site.webmanifest" />
+    <!-- Favicon https://favicon.io/favicon-generator/  Abel -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
 
-		<!-- FontAwesome -->
-		<script src="https://kit.fontawesome.com/9bdc906322.js"></script>
-		<script
-			src="https://kit-pro.fontawesome.com/releases/latest/js/pro.min.js"
-			data-auto-a11y="true"
-			data-auto-fetch-svg=""
-			data-fetch-svg-from="https://kit-pro.fontawesome.com/releases/latest/svgs"
-			defer=""
-		></script>
-	</head>
-	<body>
-		<nav>
-			<div class="container nav flex">
-				<a href="#"><img src="./img/logo.png" alt="Logo" class="brand nav-item"/></a>
-				<ul class="nav-links flex nav-item">
-					<li><a href="#acerca" class="nav-btn">Acerca</a></li>
-					<li><a href="#portfolio" class="nav-btn">Portfolio</a></li>
-					<li><a href="#contacto" class="nav-btn btn btn-sm">Contacto</a></li>
-				</ul>
-			</div>
-		</nav>
-		<header class="header flex text-centered">
-			<h1 class="text-dark">
-				Hola, <span class="highlight">soy Guido</span>
-				<br />
-				Desarrollador Web Frontend
-			</h1>
-			<p>Diseño y desarrollo sitios simples y limpios.</p>
-			<img src="./img/profile-sq.jpg" alt="Guido Torres" class="shadow-md" />
-		</header>
-		<main>
-			<section class="acerca color-bg text-light text-centered">
-				<div class="container flex-col">
-					<h2 id="acerca">Acerca de mi:</h2>
-					<p>
-						Diseñador por formación y desarrollador por vocación. Luego de recibirme de Diseñador Industrial
-						y trabajar de ello unos años, me enamore del desarrollo web. Actualmente estoy buscando
-						establecerme laboralmente en el rubro.
-					</p>
-				</div>
-				<div class="waves-bottom">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-						<path
-							d="M0,192L48,208C96,224,192,256,288,224C384,192,480,96,576,96C672,96,768,192,864,208C960,224,1056,160,1152,117.3C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-						></path>
-					</svg>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-						<path
-							fill-opacity=".5"
-							d="M0,32L48,37.3C96,43,192,53,288,90.7C384,128,480,192,576,186.7C672,181,768,107,864,96C960,85,1056,139,1152,154.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-						></path>
-					</svg>
-				</div>
-			</section>
-			<section class="conocimientos container ">
-				<div class="col-container flex shadow-md text-centered">
-					<div class="column flex-col" id="col-dev">
-						<i class="fad fa-pencil-paintbrush fa-3x"></i>
-						<h2>Diseño y concepción</h2>
-						<p>
-							Formado como Diseñador Industrial, me gusta realizar diseños simples, limpios y ordenados.
-						</p>
-						<h3 class="highlight">¿Qué Diseño?</h3>
-						<p>Diseño UI para Web, Apps, Diseño Gráfico</p>
-						<h3 class="highlight">Software y Conocimientos</h3>
-						<ul>
-							<li>Adobe Photoshop</li>
-							<li>Adobe Illustrator</li>
-							<li>Adobe XD</li>
-							<li>Sketching</li>
-							<li>Webflow</li>
-							<li>Design Thinking</li>
-							<li>Responsive Design</li>
-						</ul>
-					</div>
-					<div class="column flex-col" id="col-des">
-						<i class="fad fa-code fa-3x "></i>
-						<h2>Frontend Development</h2>
-						<p>
-							Me divierte aprender nuevas tecnologías y probar distintas herramientas de trabajo.
-						</p>
-						<h3 class="highlight">Lenguajes</h3>
-						<p>HTML5, CSS3, SASS/SCSS, JavaScript, Python</p>
-						<h3 class="highlight">Herramientas</h3>
-						<ul>
-							<li>VS Code</li>
-							<li>Bootstrap</li>
-							<li>Bulma</li>
-							<li>CodePen</li>
-							<li>GIT</li>
-							<li>Github</li>
-							<li>Github Pages</li>
-							<li>NPM Package Manager</li>
-							<li>Mobile First Development</li>
-						</ul>
-					</div>
-					<div class="column flex-col" id="col-otr">
-						<i class="fad fa-book fa-3x"></i>
-						<h2>Otros Conocimientos</h2>
-						<p>
-							Mis intereses no terminan en el Diseño y Desarrollo Web, siempre estoy buscando algo nuevo.
-						</p>
-						<h3 class="highlight">Conocimientos Valiosos</h3>
-						<p>
-							Inglés bilingüe (PET - FCE) <br />
-							Paquete Office
-						</p>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9bdc906322.js"></script>
+    <script
+      src="https://kit-pro.fontawesome.com/releases/latest/js/pro.min.js"
+      data-auto-a11y="true"
+      data-auto-fetch-svg=""
+      data-fetch-svg-from="https://kit-pro.fontawesome.com/releases/latest/svgs"
+      defer=""
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav flex">
+        <a href="#"
+          ><img src="./img/logo.png" alt="Logo" class="brand nav-item"
+        /></a>
+        <ul class="nav-links flex nav-item">
+          <li><a href="#acerca" class="nav-btn">Acerca</a></li>
+          <li><a href="#portfolio" class="nav-btn">Portfolio</a></li>
+          <li><a href="#contacto" class="nav-btn btn btn-sm">Contacto</a></li>
+        </ul>
+        <!-- <a href="#" class="mobile-button"></a> -->
+      </div>
+    </nav>
+    <header class="header flex text-centered">
+      <h1 class="text-dark">
+        Hola, <span class="highlight">soy Guido</span>
+        <br />
+        Desarrollador Web Frontend
+      </h1>
+      <p>Diseño y desarrollo sitios simples y limpios.</p>
+      <img src="./img/profile-sq.jpg" alt="Guido Torres" class="shadow-md" />
+    </header>
+    <main>
+      <section class="acerca color-bg text-light text-centered">
+        <div class="container flex-col">
+          <h2 id="acerca">Acerca de mi:</h2>
+          <p>
+            Diseñador por formación y desarrollador por vocación. Luego de
+            recibirme de Diseñador Industrial y trabajar de ello unos años, me
+            enamore del desarrollo web. Actualmente estoy buscando establecerme
+            laboralmente en el rubro.
+          </p>
+        </div>
+        <div class="waves-bottom">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              d="M0,192L48,208C96,224,192,256,288,224C384,192,480,96,576,96C672,96,768,192,864,208C960,224,1056,160,1152,117.3C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill-opacity=".5"
+              d="M0,32L48,37.3C96,43,192,53,288,90.7C384,128,480,192,576,186.7C672,181,768,107,864,96C960,85,1056,139,1152,154.7C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+      <section class="conocimientos container ">
+        <div class="col-container flex shadow-md text-centered">
+          <div class="column flex-col" id="col-dev">
+            <i class="fad fa-pencil-paintbrush fa-3x"></i>
+            <h2>Diseño y concepción</h2>
+            <p>
+              Formado como Diseñador Industrial, me gusta realizar diseños
+              simples, limpios y ordenados.
+            </p>
+            <h3 class="highlight">¿Qué Diseño?</h3>
+            <p>Diseño UI para Web, Apps, Diseño Gráfico</p>
+            <h3 class="highlight">Software y Conocimientos</h3>
+            <ul>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe XD</li>
+              <li>Sketching</li>
+              <li>Webflow</li>
+              <li>Design Thinking</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="column flex-col" id="col-des">
+            <i class="fad fa-code fa-3x "></i>
+            <h2>Frontend Development</h2>
+            <p>
+              Me divierte aprender nuevas tecnologías y probar distintas
+              herramientas de trabajo.
+            </p>
+            <h3 class="highlight">Lenguajes</h3>
+            <p>HTML5, CSS3, SASS/SCSS, JavaScript, Python</p>
+            <h3 class="highlight">Herramientas</h3>
+            <ul>
+              <li>VS Code</li>
+              <li>Bootstrap</li>
+              <li>Bulma</li>
+              <li>CodePen</li>
+              <li>GIT</li>
+              <li>Github</li>
+              <li>Github Pages</li>
+              <li>NPM Package Manager</li>
+              <li>Mobile First Development</li>
+            </ul>
+          </div>
+          <div class="column flex-col" id="col-otr">
+            <i class="fad fa-book fa-3x"></i>
+            <h2>Otros Conocimientos</h2>
+            <p>
+              Mis intereses no terminan en el Diseño y Desarrollo Web, siempre
+              estoy buscando algo nuevo.
+            </p>
+            <h3 class="highlight">Conocimientos Valiosos</h3>
+            <p>
+              Inglés bilingüe (PET - FCE) <br />
+              Paquete Office
+            </p>
 
-						<h3 class="highlight">Otros Intereses</h3>
-						<ul>
-							<li>Impresión 3D</li>
-							<li>Diseño 3D</li>
-							<li>Medicina</li>
-							<li>Música</li>
-							<li>Cocina</li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section class="portfolio container flex-col text-centered " id="portfolio">
-				<h2>Proyectos realizados</h2>
-				<p>
-					Querés ver más proyectos?
-					<a href="mailto:contacto@guidotorres.com.ar" class="highlight">Escribime!</a>
-				</p>
-				<div class="pofo-container flex">
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/autogator.jpg" alt="Autogator Site" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/hoytrasnoche.jpg" alt="Hoy Trasnoche - Podcast" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/equals.jpg" alt="Equals - Sitio Corporativo" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/gtweb.jpg" alt="Git Web" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/jsloader.jpg" alt="JavaScript Loader" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/bluedot.jpg" alt="BlueDot Podcast" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-					<div class="pofo-item shadow-md">
-						<img src="./img/pofo-thumbs/spinetta.jpg" alt="Sitio Tributo Spinetta" />
-						<div class="pofo-info-container flex-col">
-							<h2>Autogator</h2>
-							<p>Skill 1, Skill 2, Skill 3</p>
-							<a href="#" class="btn btn-sm text-light">Live Demo</a>
-						</div>
-						<div class="overlay"></div>
-					</div>
-				</div>
-			</section>
-			<section class="contacto container text-centered " id="contacto">
-				<h2>Contactame</h2>
-				<div class="contact-container flex">
-					<a href="#">
-						<div class="contact">
-							<i class="fab fa-github fa-lg"></i>
-						</div>
-					</a>
-					<a href="#">
-						<div class="contact">
-							<i class="fab fa-codepen fa-lg"></i>
-						</div>
-					</a>
-					<a href="#">
-						<div class="contact">
-							<i class="fab fa-linkedin fa-lg"></i>
-						</div>
-					</a>
-					<a href="mailto:contacto@guidotorres.com.ar">
-						<div class="contact">
-							<i class="fad fa-envelope-open-text fa-lg"></i>
-						</div>
-					</a>
-					<a href="tel:+5491151198411">
-						<div class="contact">
-							<i class="fad fa-phone-alt fa-lg"></i>
-						</div>
-					</a>
-				</div>
-				<form action="" class="contact-form">
-					<input type="text" placeholder="Nombre" required />
-					<input type="email" placeholder="Email" required />
-					<textarea
-						name=""
-						id=""
-						cols="30"
-						rows="10"
-						placeholder="Escribime tu mensaje"
-						required
-						style="resize: none;"
-					></textarea>
-					<button type="submit" class="btn">Enviar</button>
-				</form>
-			</section>
-		</main>
-		<footer class="color-bg text-light text-centered">
-			<p>Creado por mi. <a href="">Link al proyecto</a>. 2019</p>
-		</footer>
-	</body>
+            <h3 class="highlight">Otros Intereses</h3>
+            <ul>
+              <li>Impresión 3D</li>
+              <li>Diseño 3D</li>
+              <li>Medicina</li>
+              <li>Música</li>
+              <li>Cocina</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        class="portfolio container flex-col text-centered "
+        id="portfolio"
+      >
+        <h2>Proyectos realizados</h2>
+        <p>
+          Querés ver más proyectos?
+          <a href="mailto:contacto@guidotorres.com.ar" class="highlight"
+            >Escribime!</a
+          >
+        </p>
+        <div class="pofo-container flex">
+          <div class="pofo-item shadow-md">
+            <img src="./img/pofo-thumbs/autogator.jpg" alt="Autogator Site" />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img
+              src="./img/pofo-thumbs/hoytrasnoche.jpg"
+              alt="Hoy Trasnoche - Podcast"
+            />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img
+              src="./img/pofo-thumbs/equals.jpg"
+              alt="Equals - Sitio Corporativo"
+            />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img src="./img/pofo-thumbs/gtweb.jpg" alt="Git Web" />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img src="./img/pofo-thumbs/jsloader.jpg" alt="JavaScript Loader" />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img src="./img/pofo-thumbs/bluedot.jpg" alt="BlueDot Podcast" />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+          <div class="pofo-item shadow-md">
+            <img
+              src="./img/pofo-thumbs/spinetta.jpg"
+              alt="Sitio Tributo Spinetta"
+            />
+            <div class="pofo-info-container flex-col">
+              <h2>Autogator</h2>
+              <p>Skill 1, Skill 2, Skill 3</p>
+              <a href="#" class="btn btn-sm text-light">Live Demo</a>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+      <section class="contacto container text-centered " id="contacto">
+        <h2>Contactame</h2>
+        <div class="contact-container flex">
+          <a href="#">
+            <div class="contact">
+              <i class="fab fa-github fa-lg"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="contact">
+              <i class="fab fa-codepen fa-lg"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="contact">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </div>
+          </a>
+          <a href="mailto:contacto@guidotorres.com.ar">
+            <div class="contact">
+              <i class="fad fa-envelope-open-text fa-lg"></i>
+            </div>
+          </a>
+          <a href="tel:+5491151198411">
+            <div class="contact">
+              <i class="fad fa-phone-alt fa-lg"></i>
+            </div>
+          </a>
+        </div>
+        <form action="" class="contact-form">
+          <input type="text" placeholder="Nombre" required />
+          <input type="email" placeholder="Email" required />
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Escribime tu mensaje"
+            required
+            style="resize: none;"
+          ></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer class="color-bg text-light text-centered">
+      <p>Creado por mi. <a href="">Link al proyecto</a>. 2019</p>
+    </footer>
+  </body>
 </html>

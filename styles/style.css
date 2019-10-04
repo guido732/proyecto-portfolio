@@ -214,22 +214,52 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  margin: 1rem;
 }
 
 .nav .nav-links li {
   padding-left: 4rem;
 }
 
-.nav .nav-item {
-  margin: 1rem;
-}
-
-.nav .nav-item:first-child {
+.nav .nav-links:first-child {
   margin-right: 0rem;
 }
 
-.nav .nav-item:last-child {
+.nav .nav-links:last-child {
   margin-left: 0rem;
+}
+
+.nav .mobile-button {
+  content: "";
+  width: 2rem;
+  height: 3px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: red;
+}
+
+.nav .mobile-button::before {
+  content: "";
+  width: 2rem;
+  height: 3px;
+  display: inline-block;
+  position: relative;
+  top: 1rem;
+  left: 0;
+  background-color: red;
+}
+
+.nav .mobile-button::after {
+  content: "";
+  width: 2rem;
+  height: 3px;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: red;
 }
 
 .header {
