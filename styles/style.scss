@@ -34,442 +34,470 @@ $m-lg: 4rem;
 
 // Extends
 %fontfamily-sans {
-	font-family: "Be Vietnam", sans-serif;
-	font-weight: 400;
-	font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 %fontfamily-mono {
-	font-family: "Fira Code", monospace;
-	font-weight: 500;
-	font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  font-size: 1rem;
 }
 // Element classes
 a {
-	transition: $transition-hover;
-	color: $text-dark;
-	@extend %fontfamily-mono;
-	&:hover {
-		transition: $transition-hover;
-		color: $color-primary;
-	}
+  transition: $transition-hover;
+  color: $text-dark;
+  @extend %fontfamily-mono;
+  &:hover {
+    transition: $transition-hover;
+    color: $color-primary;
+  }
 }
 h1 {
-	@extend %fontfamily-sans;
-	font-size: 2rem;
-	font-weight: 700;
-	padding-bottom: 1rem;
+  @extend %fontfamily-sans;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
 }
 h2 {
-	@extend %fontfamily-sans;
-	font-size: 2rem;
-	font-weight: 700;
-	padding-bottom: 1rem;
+  @extend %fontfamily-sans;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
 }
 p {
-	@extend %fontfamily-sans;
-	padding-bottom: 1rem;
+  @extend %fontfamily-sans;
+  padding-bottom: 1rem;
 }
 img {
-	width: 100%;
-	display: block;
+  width: 100%;
+  display: block;
 }
 // Utility Classes
 .flex {
-	display: flex;
-	flex-direction: row wrap;
-	justify-content: center;
-	align-items: center;
-	&-col {
-		flex-direction: column;
-	}
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+  &-col {
+    flex-direction: column;
+  }
 }
 .highlight {
-	color: $color-primary;
+  color: $color-primary;
 }
 .container {
-	max-width: 1170px;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	margin: auto;
+  max-width: 1170px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
 }
 .btn {
-	border: 2px solid $color-primary;
-	background: transparent;
-	color: $color-primary;
-	font-size: 1.2rem;
-	padding: 1rem 2rem;
-	text-decoration: none;
-	border-radius: 20rem;
-	transition: $transition-hover;
-	&:hover {
-		transition: $transition-hover;
-		background-color: $color-primary;
-		color: $text-light;
-	}
+  border: 2px solid $color-primary;
+  background: transparent;
+  color: $color-primary;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 20rem;
+  transition: $transition-hover;
+  &:hover {
+    transition: $transition-hover;
+    background-color: $color-primary;
+    color: $text-light;
+  }
 }
 .btn-sm {
-	font-size: 1rem;
-	padding: 0.5rem 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 .text-dark {
-	color: $text-dark;
+  color: $text-dark;
 }
 .text-light {
-	color: $text-light;
+  color: $text-light;
 }
 .text-centered {
-	text-align: center;
+  text-align: center;
 }
 .color-bg {
-	background-color: $color-primary;
+  background-color: $color-primary;
 }
 .shadow-md {
-	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
 .waves-bottom {
-	position: absolute;
-	width: 100%;
-	fill: $color-primary;
-	bottom: 1%;
-	transform: translateY(100%);
-	// opacity: 0.75;
-	svg {
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+  position: absolute;
+  width: 100%;
+  fill: $color-primary;
+  bottom: 1%;
+  transform: translateY(100%);
+  svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 // Section specific styling
 body {
-	@extend %fontfamily-sans;
+  @extend %fontfamily-sans;
 }
 
 .acerca,
 .header,
 footer {
-	padding: 10rem 0 10rem 0;
+  padding: 10rem 0 10rem 0;
 }
 
 nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 3;
-	top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  top: 0;
 }
 .nav {
-	margin-top: $m-sm;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	@extend %fontfamily-mono;
-	img {
-		width: 2rem;
-	}
-	.nav-links {
-		flex-flow: row nowrap;
-		li {
-			padding-left: $m-lg;
-		}
-	}
-	.nav-item {
-		margin: 1rem;
-		&:first-child {
-			margin-right: 0rem;
-		}
-		&:last-child {
-			margin-left: 0rem;
-		}
-	}
+  margin-top: $m-sm;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  @extend %fontfamily-mono;
+  img {
+    width: 2rem;
+  }
+  .nav-links {
+    flex-flow: row nowrap;
+    margin: 1rem;
+    li {
+      padding-left: $m-lg;
+    }
+    &:first-child {
+      margin-right: 0rem;
+    }
+    &:last-child {
+      margin-left: 0rem;
+    }
+  }
+  .mobile-button {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+  .mobile-button::before {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    display: inline-block;
+    position: relative;
+    top: 1rem;
+    left: 0;
+    background-color: red;
+  }
+  .mobile-button::after {
+    content: "";
+    width: 2rem;
+    height: 3px;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    background-color: red;
+  }
 }
 
 .header {
-	width: 100%;
-	flex-direction: column;
-	margin-top: $m-md;
-	padding-left: $m-sm;
-	padding-right: $m-sm;
-	img {
-		max-width: 250px;
-		border-radius: 50%;
-	}
-	p {
-		margin-bottom: $m-md;
-	}
+  width: 100%;
+  flex-direction: column;
+  margin-top: $m-md;
+  padding-left: $m-sm;
+  padding-right: $m-sm;
+  img {
+    max-width: 250px;
+    border-radius: 50%;
+  }
+  p {
+    margin-bottom: $m-md;
+  }
 }
 .acerca {
-	margin-top: -18rem;
-	padding-bottom: 17.5rem;
-	position: relative;
-	z-index: -1;
-	p {
-		max-width: 715px;
-		margin: auto;
-	}
+  margin-top: -18rem;
+  padding-bottom: 17.5rem;
+  position: relative;
+  z-index: -1;
+  p {
+    max-width: 715px;
+    margin: auto;
+  }
 }
 
 .col-container {
-	width: 100%;
-	position: relative;
-	margin-top: -$m-lg * 3;
-	margin-bottom: $m-lg;
-	flex-direction: column;
-	border: 1px solid $color-border;
-	border-radius: $border-radius-sm;
-	background-color: $color-background;
-	.column {
-		flex: 1 1 0;
-		padding: 3rem;
-		align-self: stretch;
-		border-bottom: 1px solid $color-border;
-		&:last-child {
-			border-bottom: none;
-		}
-		svg {
-			color: $color-primary;
-			margin-bottom: $m-md;
-		}
-		p {
-			margin-bottom: $m-sm;
-		}
-		h3 {
-			margin-bottom: $m-sm / 2;
-		}
-		li {
-			margin-bottom: $m-sm / 2;
-		}
-	}
+  width: 100%;
+  position: relative;
+  margin-top: -$m-lg * 3;
+  margin-bottom: $m-lg;
+  flex-direction: column;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  background-color: $color-background;
+  .column {
+    flex: 1 1 0;
+    padding: 3rem;
+    align-self: stretch;
+    border-bottom: 1px solid $color-border;
+    &:last-child {
+      border-bottom: none;
+    }
+    svg {
+      color: $color-primary;
+      margin-bottom: $m-md;
+    }
+    p {
+      margin-bottom: $m-sm;
+    }
+    h3 {
+      margin-bottom: $m-sm / 2;
+    }
+    li {
+      margin-bottom: $m-sm / 2;
+    }
+  }
 }
 .portfolio {
-	margin-bottom: $m-lg;
-	p {
-		margin-bottom: $m-md;
-	}
+  margin-bottom: $m-lg;
+  p {
+    margin-bottom: $m-md;
+  }
 }
 .pofo-container {
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .pofo-item {
-	border-radius: $border-radius-md;
-	overflow: hidden;
-	position: relative;
-	margin-bottom: 2rem;
-	flex: 1 1 auto;
-	.overlay {
-		transition: $transition-hover;
-		position: absolute;
-		background-color: #293347;
-		opacity: 0;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		transition: $transition-hover;
-	}
-	.pofo-info-container {
-		z-index: 2;
-		position: absolute;
-		display: flex;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		transition: $transition-hover;
-		color: $text-light;
-	}
-	&:hover {
-		.overlay {
-			opacity: 1;
-		}
-		.pofo-info-container {
-			opacity: 1;
-			transition-delay: $transition-delay;
-		}
-	}
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  flex: 1 1 auto;
+  .overlay {
+    transition: $transition-hover;
+    position: absolute;
+    background-color: #293347;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: $transition-hover;
+  }
+  .pofo-info-container {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: $transition-hover;
+    color: $text-light;
+  }
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+    .pofo-info-container {
+      opacity: 1;
+      transition-delay: $transition-delay;
+    }
+  }
 }
 .contacto {
-	margin-bottom: $m-lg;
-	h2 {
-		margin-bottom: $m-md;
-	}
+  margin-bottom: $m-lg;
+  h2 {
+    margin-bottom: $m-md;
+  }
 }
 .contact-container {
-	width: 100%;
-	justify-content: space-between;
-	margin-bottom: $m-lg;
-	.contact {
-		padding: 1rem;
-		border-radius: 50%;
-		font-size: 1.2rem;
-		background-color: $color-background;
-		transition: $transition-hover;
-		&:hover {
-			@extend .shadow-md;
-			transition: $transition-hover / 2;
-		}
-	}
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: $m-lg;
+  .contact {
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    background-color: $color-background;
+    transition: $transition-hover;
+    &:hover {
+      @extend .shadow-md;
+      transition: $transition-hover / 2;
+    }
+  }
 }
 
 .contact-form {
-	input,
-	textarea {
-		display: block;
-		width: 100%;
-		margin: auto;
-		margin-bottom: 1.5rem;
-		padding: 0.75rem 1rem;
-		border: 1px solid $text-dark;
-		border-radius: $border-radius-sm;
-		@extend %fontfamily-mono;
-		font-size: 0.8rem;
-		font-weight: 400;
-		color: $text-dark;
-		&:empty,
-		&:valid {
-			border: 1px solid $color-secondary;
-		}
-		&:active,
-		&:focus {
-			box-shadow: 0 0 3px 0 $color-secondary;
-		}
-		&::placeholder {
-			@extend %fontfamily-mono;
-			font-size: 0.8rem;
-			font-weight: 400;
-			opacity: 0.5;
-		}
-	}
-	textarea {
-		margin-bottom: $m-md;
-	}
-	button {
-		@extend %fontfamily-mono;
-	}
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid $text-dark;
+    border-radius: $border-radius-sm;
+    @extend %fontfamily-mono;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $text-dark;
+    &:empty,
+    &:valid {
+      border: 1px solid $color-secondary;
+    }
+    &:active,
+    &:focus {
+      box-shadow: 0 0 3px 0 $color-secondary;
+    }
+    &::placeholder {
+      @extend %fontfamily-mono;
+      font-size: 0.8rem;
+      font-weight: 400;
+      opacity: 0.5;
+    }
+  }
+  textarea {
+    margin-bottom: $m-md;
+  }
+  button {
+    @extend %fontfamily-mono;
+  }
 }
 // Media Queries
 @media screen and (min-width: $breakpoint-mobile) {
-	.header {
-		img {
-			max-width: 300px;
-		}
-	}
-	.acerca {
-		padding-top: 13rem;
-		margin-top: -19rem;
-	}
+  .header {
+    img {
+      max-width: 300px;
+    }
+  }
+  .acerca {
+    padding-top: 13rem;
+    margin-top: -19rem;
+  }
 
-	.pofo-item {
-		flex: 1 1 300px;
-		margin: 0 0.5rem 1rem 0.5rem;
-	}
-	.pofo-container {
-		.pofo-item {
-			flex: 1 1 40%;
-		}
-	}
-	.contact-container {
-		max-width: 578px;
-		margin: auto;
-		margin-bottom: $m-lg;
-		.contact {
-			font-size: 1.5rem;
-			padding: 0.75rem;
-		}
-	}
-	.contact-form {
-		input,
-		textarea {
-			max-width: 578px;
-		}
-	}
+  .pofo-item {
+    flex: 1 1 300px;
+    margin: 0 0.5rem 1rem 0.5rem;
+  }
+  .pofo-container {
+    .pofo-item {
+      flex: 1 1 40%;
+    }
+  }
+  .contact-container {
+    max-width: 578px;
+    margin: auto;
+    margin-bottom: $m-lg;
+    .contact {
+      font-size: 1.5rem;
+      padding: 0.75rem;
+    }
+  }
+  .contact-form {
+    input,
+    textarea {
+      max-width: 578px;
+    }
+  }
 }
 @media screen and (min-width: $breakpoint-tablet) {
-	.header {
-		img {
-			max-width: 350px;
-		}
-	}
-	.col-container {
-		flex-direction: row;
-		.column {
-			padding: 3rem 1.5rem;
-			border-bottom: none;
-			border-right: 1px solid $color-border;
-			&:last-child {
-				border-right: none;
-			}
-		}
-	}
-	.acerca {
-		padding-top: 15rem;
-		margin-top: -20.5rem;
-	}
-	.contact-container {
-		.contact {
-			font-size: 2rem;
-			padding: 1rem;
-		}
-	}
-	.pofo-container {
-		.pofo-item {
-			flex: 1 1 30%;
-			max-width: 32%;
-		}
-	}
+  .header {
+    img {
+      max-width: 350px;
+    }
+  }
+  .col-container {
+    flex-direction: row;
+    .column {
+      padding: 3rem 1.5rem;
+      border-bottom: none;
+      border-right: 1px solid $color-border;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .acerca {
+    padding-top: 15rem;
+    margin-top: -20.5rem;
+  }
+  .contact-container {
+    .contact {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  }
+  .pofo-container {
+    .pofo-item {
+      flex: 1 1 30%;
+      max-width: 32%;
+    }
+  }
 }
 @media screen and (min-width: $breakpoint-desktop-sm) {
-	.header {
-		img {
-			max-width: 350px;
-		}
-	}
-	.col-container {
-		.column {
-			padding: 3rem;
-		}
-	}
-	.acerca {
-		padding-top: 16rem;
-		margin-top: -21rem;
-	}
-	.contact-container {
-		max-width: 578px;
-	}
+  .header {
+    img {
+      max-width: 350px;
+    }
+  }
+  .col-container {
+    .column {
+      padding: 3rem;
+    }
+  }
+  .acerca {
+    padding-top: 16rem;
+    margin-top: -21rem;
+  }
+  .contact-container {
+    max-width: 578px;
+  }
 }
 @media screen and (min-width: $breakpoint-desktop-lg) {
-	.nav {
-		max-width: 1100px;
-		margin: auto;
-		margin-top: 1rem;
-		.nav-item {
-			margin: 1rem 0rem;
-			&:first-child {
-				margin-right: 0rem;
-			}
-			&:last-child {
-				margin-left: 0rem;
-			}
-		}
-	}
-	h1 {
-		font-size: 2.5rem;
-	}
-	.header {
-		p {
-			margin-bottom: $m-lg;
-		}
-		img {
-			max-width: 400px;
-		}
-	}
-	.acerca {
-		padding-top: 17rem;
-		margin-top: -22rem;
-	}
+  .nav {
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 1rem;
+    .nav-item {
+      margin: 1rem 0rem;
+      &:first-child {
+        margin-right: 0rem;
+      }
+      &:last-child {
+        margin-left: 0rem;
+      }
+    }
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .header {
+    p {
+      margin-bottom: $m-lg;
+    }
+    img {
+      max-width: 400px;
+    }
+  }
+  .acerca {
+    padding-top: 17rem;
+    margin-top: -22rem;
+  }
 }
