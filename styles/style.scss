@@ -1,14 +1,7 @@
-// Nombre y datos relevantes
-// Extracto personal
-// Tecnologías aprendidas
-// Proyectos con link (portfolio)
-// Formulario de contacto
-
 // Imports
 @import "./_resets";
 
 // Vars
-$color-primary: #8c43ff;
 $color-primary: #4384fe;
 $color-secondary: #55abe4;
 $color-background: #fff;
@@ -605,7 +598,7 @@ footer {
 		&:active,
 		&:focus {
 			color: $text-light;
-			opacity: 0.5;
+			opacity: 0.65;
 		}
 	}
 }
