@@ -281,6 +281,7 @@ nav {
 }
 
 .nav {
+  position: relative;
   margin-top: 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -295,64 +296,125 @@ nav {
   width: 2rem;
 }
 
-.nav .nav-links {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  margin: 1rem;
+.nav input {
+  display: none;
 }
 
-.nav .nav-links li {
-  padding-left: 4rem;
+.nav label {
+  cursor: pointer;
 }
 
-.nav .nav-links:first-child {
+.nav input:not(:checked) ~ .nav-links {
+  display: none;
+}
+
+.nav input:checked ~ .nav-links {
+  display: block;
+  position: absolute;
+  background-color: #cfb8f3;
+  width: 100%;
+  top: 4rem;
+  left: 0;
+  padding: 2rem;
+}
+
+.nav input:checked ~ .nav-links li {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.nav input:checked ~ .nav-links:first-child {
   margin-right: 0rem;
 }
 
-.nav .nav-links:last-child {
+.nav input:checked ~ .nav-links:last-child {
   margin-left: 0rem;
 }
 
 .nav .mobile-button {
-  content: "";
-  width: 2rem;
-  height: 3px;
-  display: inline-block;
+  display: block;
   position: relative;
-  top: 0;
-  left: 0;
-  background-color: red;
+  width: 2rem;
+  height: 4px;
+  margin: 0.3rem 0;
+  border-radius: 5px;
+  background-color: black;
+  content: "";
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
-.nav .mobile-button::before {
-  content: "";
-  width: 2rem;
-  height: 3px;
-  display: inline-block;
-  position: relative;
-  top: 1rem;
-  left: 0;
-  background-color: red;
+.nav input:checked ~ label .mobile-button:nth-child(2) {
+  height: 0;
 }
 
-.nav .mobile-button::after {
-  content: "";
-  width: 2rem;
-  height: 3px;
-  display: inline-block;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  background-color: red;
+.nav input:checked ~ label .mobile-button:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(-10px);
+          transform: rotate(45deg) translateY(-10px);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
 }
 
-@media screen and (min-width: 1200px) {
+.nav input:checked ~ label .mobile-button:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateY(10px);
+          transform: rotate(-45deg) translateY(10px);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+@media screen and (min-width: 768px) {
   .nav {
     max-width: 1100px;
     margin: auto;
-    margin-top: 1rem;
+  }
+  .nav label,
+  .nav input {
+    display: none;
+  }
+  .nav input:not(:checked) ~ .nav-links,
+  .nav input:checked ~ .nav-links,
+  .nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+    background-color: transparent;
+    top: unset;
+    left: unset;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+  .nav input:not(:checked) ~ .nav-links li,
+  .nav input:checked ~ .nav-links li,
+  .nav .nav-links li {
+    padding-left: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+  .nav input:not(:checked) ~ .nav-links:first-child,
+  .nav input:checked ~ .nav-links:first-child,
+  .nav .nav-links:first-child {
+    margin-right: 0rem;
+  }
+  .nav input:not(:checked) ~ .nav-links:last-child,
+  .nav input:checked ~ .nav-links:last-child,
+  .nav .nav-links:last-child {
+    margin-left: 0rem;
   }
   .nav .nav-item {
     margin: 1rem 0rem;
@@ -399,7 +461,7 @@ nav {
 
 @media screen and (min-width: 1200px) {
   .header {
-    margin-top: 12rem;
+    margin-top: 10rem;
   }
   .header p {
     margin-bottom: 4rem;

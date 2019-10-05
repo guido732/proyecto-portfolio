@@ -229,6 +229,7 @@ nav {
 	top: 0;
 }
 .nav {
+	position: relative;
 	margin-top: $m-sm;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -236,11 +237,26 @@ nav {
 	img {
 		width: 2rem;
 	}
-	.nav-links {
-		flex-flow: row nowrap;
-		margin: 1rem;
+	input {
+		display: none;
+	}
+	label {
+		cursor: pointer;
+	}
+	input:not(:checked) ~ .nav-links {
+		display: none;
+	}
+	input:checked ~ .nav-links {
+		display: block;
+		position: absolute;
+		background-color: #cfb8f3;
+		width: 100%;
+		top: 4rem;
+		left: 0;
+		padding: $m-md;
 		li {
-			padding-left: $m-lg;
+			margin-bottom: $m-lg;
+			text-align: center;
 		}
 		&:first-child {
 			margin-right: 0rem;
@@ -250,40 +266,63 @@ nav {
 		}
 	}
 	.mobile-button {
-		content: "";
-		width: 2rem;
-		height: 3px;
-		display: inline-block;
+		display: block;
 		position: relative;
-		top: 0;
-		left: 0;
-		background-color: red;
-	}
-	.mobile-button::before {
-		content: "";
 		width: 2rem;
-		height: 3px;
-		display: inline-block;
-		position: relative;
-		top: 1rem;
-		left: 0;
-		background-color: red;
-	}
-	.mobile-button::after {
+		height: 4px;
+		margin: 0.3rem 0;
+		border-radius: 5px;
+		background-color: black;
 		content: "";
-		width: 2rem;
-		height: 3px;
-		display: inline-block;
-		position: relative;
-		bottom: 0;
-		left: 0;
-
-		background-color: red;
+		transition: all $transition-delay ease-in-out;
+		transform-origin: left center;
 	}
-	@media screen and (min-width: $breakpoint-desktop-lg) {
+	input:checked ~ label {
+		.mobile-button:nth-child(2) {
+			height: 0;
+		}
+		.mobile-button:nth-child(1) {
+			transform: rotate(45deg) translateY(-10px);
+			transform-origin: left center;
+		}
+		.mobile-button:nth-child(3) {
+			transform: rotate(-45deg) translateY(10px);
+			transform-origin: left center;
+		}
+	}
+	@media screen and (min-width: $breakpoint-tablet) {
 		max-width: 1100px;
 		margin: auto;
-		margin-top: 1rem;
+		label,
+		input {
+			display: none;
+		}
+		input:not(:checked) ~ .nav-links,
+		input:checked ~ .nav-links,
+		.nav-links {
+			display: flex;
+			position: relative;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			margin: 1rem;
+			background-color: transparent;
+			top: unset;
+			left: unset;
+			width: fit-content;
+			padding: 0;
+			li {
+				padding-left: $m-md;
+				text-align: center;
+				margin: 0;
+			}
+			&:first-child {
+				margin-right: 0rem;
+			}
+			&:last-child {
+				margin-left: 0rem;
+			}
+		}
 		.nav-item {
 			margin: 1rem 0rem;
 			&:first-child {
@@ -293,6 +332,8 @@ nav {
 				margin-left: 0rem;
 			}
 		}
+	}
+	@media screen and (min-width: $breakpoint-desktop-lg) {
 	}
 }
 .header {
@@ -321,7 +362,7 @@ nav {
 	@media screen and (min-width: $breakpoint-desktop-sm) {
 	}
 	@media screen and (min-width: $breakpoint-desktop-lg) {
-		margin-top: $m-lg * 3;
+		margin-top: $m-lg * 2.5;
 		p {
 			margin-bottom: $m-lg;
 		}
