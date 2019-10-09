@@ -197,8 +197,11 @@ img {
   }
 }
 .hover-lift {
-  transform: translateY(0);
+  // transform: translateY(0);
   @media screen and (min-width: $breakpoint-desktop-sm) {
+    // &:hover {
+    //   animation: hoverlift $transition-hover forwards;
+    // }
     &:hover {
       transform: translateY(-$m-sm/2);
     }
@@ -491,7 +494,7 @@ nav {
       }
       .pofo-info-container {
         opacity: 1;
-        transition-delay: $transition-delay;
+        transition-delay: $transition-delay * 1.75;
       }
     }
     @media screen and (min-width: $breakpoint-mobile) {
@@ -514,16 +517,21 @@ nav {
   width: 100%;
   justify-content: space-between;
   margin-bottom: $m-lg;
+  a {
+    &:hover {
+      transition-delay: $transition-delay * 2;
+    }
+  }
   .contact {
     padding: 1rem;
-    // border-radius: 50%;
+    border-radius: 50%;
     font-size: 1.2rem;
     background-color: $color-background;
     transition: $transition-hover;
     &:hover {
       @extend .shadow-md;
-      transition: $transition-hover;
-      transition-delay: $transition-delay;
+      transition: $transition-hover / 4;
+      transition-delay: $transition-delay / 4;
     }
   }
   @media screen and (min-width: $breakpoint-mobile) {
@@ -610,5 +618,16 @@ footer {
       color: $text-light;
       opacity: 0.65;
     }
+  }
+}
+
+@keyframes hoverlift {
+  from {
+    transform: translateY(0);
+    transition: ease-in;
+  }
+  to {
+    transform: translateY(-$m-sm/2);
+    transition: ease-in;
   }
 }
