@@ -272,7 +272,8 @@ img {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
+  background-color: #fff;
   top: 0;
   left: 0;
   width: 100%;
@@ -283,6 +284,7 @@ nav {
 .nav {
   position: relative;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -306,15 +308,29 @@ nav {
 
 .nav input:not(:checked) ~ .nav-links {
   display: none;
+  height: 0vh;
 }
 
 .nav input:checked ~ .nav-links {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
   position: absolute;
-  background-color: #cfb8f3;
+  background-color: #fff;
   width: 100%;
-  top: 4rem;
+  top: 3rem;
   left: 0;
+  height: 100vh;
   padding: 2rem;
 }
 
@@ -355,6 +371,7 @@ nav {
           transform: rotate(45deg) translateY(-10px);
   -webkit-transform-origin: left center;
           transform-origin: left center;
+  background-color: #4384fe;
 }
 
 .nav input:checked ~ label .mobile-button:nth-child(3) {
@@ -362,6 +379,7 @@ nav {
           transform: rotate(-45deg) translateY(10px);
   -webkit-transform-origin: left center;
           transform-origin: left center;
+  background-color: #4384fe;
 }
 
 @media screen and (min-width: 768px) {
@@ -391,13 +409,14 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     margin: 1rem;
+    padding: 0;
     background-color: transparent;
     top: unset;
     left: unset;
+    height: unset;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 0;
   }
   .nav input:not(:checked) ~ .nav-links li,
   .nav input:checked ~ .nav-links li,
@@ -671,7 +690,6 @@ nav {
 
 .contact-container .contact {
   padding: 1rem;
-  border-radius: 50%;
   font-size: 1.2rem;
   background-color: #fff;
   -webkit-transition: 0.4s;
@@ -679,8 +697,10 @@ nav {
 }
 
 .contact-container .contact:hover {
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
 }
 
 @media screen and (min-width: 576px) {
