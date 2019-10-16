@@ -613,9 +613,9 @@ nav {
 	.blog-element {
 		overflow: hidden;
 		img {
+			margin-bottom: $m-sm/2;
 			border-radius: $m-sm;
 			@extend .shadow-md;
-			margin-bottom: $m-sm/2;
 		}
 		.blog-element-info {
 			text-align: center;
@@ -626,6 +626,7 @@ nav {
 		}
 	}
 	@media screen and (min-width: $breakpoint-mobile) {
+		padding: 0 7rem;
 		.blog-element {
 			.blog-element-info {
 				h2 {
@@ -637,7 +638,7 @@ nav {
 	@media screen and (min-width: $breakpoint-tablet) {
 		grid-template: 1fr 1fr / repeat(4, 1fr);
 		margin: 0 auto;
-		margin-bottom: 20rem;
+		margin-bottom: 5rem;
 		padding: 0 5rem;
 		.top1 {
 			grid-area: 1 / 1 / 2 / 3;

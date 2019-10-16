@@ -827,8 +827,8 @@ nav {
 }
 
 .blog .blog-element img {
-  border-radius: 1rem;
   margin-bottom: 0.5rem;
+  border-radius: 1rem;
 }
 
 .blog .blog-element .blog-element-info {
@@ -841,6 +841,9 @@ nav {
 }
 
 @media screen and (min-width: 576px) {
+  .blog {
+    padding: 0 7rem;
+  }
   .blog .blog-element .blog-element-info h2 {
     font-size: 2rem;
   }
@@ -852,7 +855,7 @@ nav {
     -ms-grid-columns: (1fr)[4];
         grid-template: 1fr 1fr/repeat(4, 1fr);
     margin: 0 auto;
-    margin-bottom: 20rem;
+    margin-bottom: 5rem;
     padding: 0 5rem;
   }
   .blog .top1 {
